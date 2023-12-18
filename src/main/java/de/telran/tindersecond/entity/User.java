@@ -1,4 +1,4 @@
-package de.telran.tindersecond;
+package de.telran.tindersecond.entity;
 
 
 import jakarta.persistence.Column;

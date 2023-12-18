@@ -1,5 +1,6 @@
-package de.telran.tindersecond;
+package de.telran.tindersecond.controller;
 
+import de.telran.tindersecond.entity.User;
 import de.telran.tindersecond.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;

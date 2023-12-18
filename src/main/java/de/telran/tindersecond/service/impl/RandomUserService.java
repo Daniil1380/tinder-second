@@ -1,11 +1,11 @@
-package de.telran.tindersecond.service;
+package de.telran.tindersecond.service.impl;
 
-import de.telran.tindersecond.User;
+import de.telran.tindersecond.entity.User;
 import de.telran.tindersecond.repository.UserRepository;
+import de.telran.tindersecond.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
