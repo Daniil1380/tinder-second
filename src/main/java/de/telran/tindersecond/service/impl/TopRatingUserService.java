@@ -1,6 +1,8 @@
 package de.telran.tindersecond.service.impl;
 
+import de.telran.tindersecond.entity.Photo;
 import de.telran.tindersecond.entity.User;
+import de.telran.tindersecond.repository.PhotoRepository;
 import de.telran.tindersecond.repository.UserRepository;
 import de.telran.tindersecond.service.UserService;
 import lombok.RequiredArgsConstructor;
@@ -15,6 +17,7 @@ import java.util.List;
 public class TopRatingUserService implements UserService {
 
     private final UserRepository userRepository;
+    private final PhotoRepository photoRepository;
 
     @Override
     public User getNewUser() {
@@ -39,6 +42,8 @@ public class TopRatingUserService implements UserService {
 
     @Override
     public List<User> getByName(String name) {
+        List<Photo> photos = photoRepository.findAll();
+        System.out.println(photos);
         List<User> users = userRepository.findAutocomplete2(name);
         return users;
     }

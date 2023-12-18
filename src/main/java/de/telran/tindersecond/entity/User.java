@@ -4,10 +4,13 @@ package de.telran.tindersecond.entity;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.util.List;
 
 //POJO - plain old java object - старый добрый джава объект
 @Entity //сущность jpa
@@ -29,5 +32,8 @@ public class User {
 
     @Column(name = "description")
     private String description;
+
+    @OneToMany(mappedBy = "user")
+    private List<Photo> photos;
 
 }
