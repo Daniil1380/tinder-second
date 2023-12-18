@@ -39,7 +39,7 @@ public class TopRatingUserService implements UserService {
 
     @Override
     public List<User> getByName(String name) {
-        List<User> users = userRepository.getUsersByNameStartingWith(name);
+        List<User> users = userRepository.findAutocomplete2(name);
         return users;
     }
 }
