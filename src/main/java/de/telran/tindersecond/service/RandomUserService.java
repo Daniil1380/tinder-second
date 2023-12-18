@@ -19,9 +19,13 @@ public class RandomUserService implements UserService {
     public User getNewUser() {
         List<User> users = userRepository.findAll();
 
+        if (users == null || users.size() == 0) {
+            throw new RuntimeException();
+        }
+
         Random random = new Random();
 
-        int randomNumber = random.nextInt(3);
+        int randomNumber = random.nextInt(users.size());
 
         return users.get(randomNumber);
     }
