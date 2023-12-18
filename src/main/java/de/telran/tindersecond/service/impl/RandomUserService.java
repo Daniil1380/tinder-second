@@ -30,4 +30,9 @@ public class RandomUserService implements UserService {
         return users.get(randomNumber);
     }
 
+    @Override
+    public List<User> getByName(String name) {
+        return null;
+    }
+
 }

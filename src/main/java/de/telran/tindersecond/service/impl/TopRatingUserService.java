@@ -36,4 +36,10 @@ public class TopRatingUserService implements UserService {
 
         return bestUser;
     }
+
+    @Override
+    public List<User> getByName(String name) {
+        List<User> users = userRepository.getUsersByNameStartingWith(name);
+        return users;
+    }
 }
