@@ -1,10 +1,13 @@
 package de.telran.tindersecond.controller;
 
+import de.telran.tindersecond.ShareRatingDto;
 import de.telran.tindersecond.entity.User;
 import de.telran.tindersecond.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -23,6 +26,13 @@ public class UserController {
     @GetMapping(value = "/autocomplete/{name}")
     public List<User> getByName(@PathVariable(value = "name") String name) {
         return userService.getByName(name);
+    }
+
+    ///share/from/daniil/to/anna/count/1000
+
+    @PostMapping(value = "/share")
+    public void shareRating(@RequestBody ShareRatingDto shareRatingDto) {
+        System.out.println(shareRatingDto);
     }
 
 }
