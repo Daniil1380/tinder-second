@@ -28,11 +28,4 @@ public class UserController {
         return userService.getByName(name);
     }
 
-    ///share/from/daniil/to/anna/count/1000
-
-    @PostMapping(value = "/share")
-    public void shareRating(@RequestBody ShareRatingDto shareRatingDto) {
-        System.out.println(shareRatingDto);
-    }
-
 }
