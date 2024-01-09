@@ -18,6 +18,7 @@ public class RatingServiceImpl implements RatingService {
 
     @Override
     @Transactional
+    @Deprecated
     public void shareRating(Long fromId, Long toId, Integer countOfRating) {
         Optional<User> fromUserOptional = userRepository.findById(fromId);
         Optional<User> toUserOptional = userRepository.findById(toId);
@@ -31,12 +32,6 @@ public class RatingServiceImpl implements RatingService {
             toUser.setRating(toUser.getRating() + countOfRating);
 
             userRepository.save(fromUser);
-
-
-            if (true) {
-                throw new RuntimeException();
-            }
-
             userRepository.save(toUser);
         }
 
