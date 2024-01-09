@@ -24,7 +24,7 @@ public class TopRatingUserService implements UserService {
         List<User> users = userRepository.findAll();
 
         if (users == null || users.size() == 0) {
-            throw new RuntimeException();
+            throw new RuntimeException(); //500
         }
 
         int maxRating = 0;
