@@ -42,8 +42,6 @@ public class TopRatingUserService implements UserService {
 
     @Override
     public List<User> getByName(String name) {
-        List<Photo> photos = photoRepository.findAll();
-        System.out.println(photos);
         List<User> users = userRepository.findAutocomplete2(name);
         return users;
     }
