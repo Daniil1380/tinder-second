@@ -19,4 +19,17 @@ public class RatingController {
         ratingService.shareRating(shareRatingDto.getFromId(), shareRatingDto.getToId(), shareRatingDto.getCountOfRating());
     }
 
+    @PostMapping(value = "/share")
+    public void shareRating(@RequestBody ShareRatingDto shareRatingDto) {
+        //валидацию добавить можно
+        ratingService.shareRating(shareRatingDto.getFromId(), shareRatingDto.getToId(), shareRatingDto.getCountOfRating());
+    }
+
+    @PostMapping(value = "/share")
+    public void shareRating(@RequestBody ShareRatingDto shareRatingDto) {
+        //валидацию добавить можно
+        ratingService.shareRating(shareRatingDto.getFromId(), shareRatingDto.getToId(), shareRatingDto.getCountOfRating());
+    }
+
+
 }
